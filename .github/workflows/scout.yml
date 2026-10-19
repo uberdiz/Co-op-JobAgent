@@ -1,0 +1,76 @@
+name: Job scout
+
+on:
+  schedule:
+    - cron: "30 11 * * 1,4"   # Mon + Thu 11:30 UTC = 7:30 AM EDT (6:30 AM EST)
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Dry run (no Gmail drafts, leads are not marked as seen)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: job-scout
+  cancel-in-progress: false
+
+jobs:
+  scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Check required secrets
+        env:
+          KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROFILE: ${{ secrets.PROFILE_YAML }}
+        run: |
+          [ -n "$KEY" ] || { echo "::error::Add the GEMINI_API_KEY secret (free key: https://aistudio.google.com/apikey)"; exit 1; }
+          [ -n "$PROFILE" ] || { echo "::error::Add the PROFILE_YAML secret (your filled-in config/profile.example.yaml)"; exit 1; }
+
+      - run: pip install -r requirements.txt
+
+      # Remembers which postings were already reported. A cache, not a commit, so nothing personal lands in this repo.
+      - name: Restore seen-leads list
+        id: seen
+        uses: actions/cache/restore@v4
+        with:
+          path: state/seen.json
+          key: seen-${{ github.run_id }}
+          restore-keys: seen-
+
+      - name: Run the scout (finds leads; creates Gmail DRAFTS only - it never sends or applies)
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          PROFILE_YAML: ${{ secrets.PROFILE_YAML }}
+          GMAIL_OAUTH_JSON: ${{ secrets.GMAIL_OAUTH_JSON }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          SEEN_PATH: state/seen.json
+          DIGEST_DIR: state/digests
+          DRY_RUN: ${{ inputs.dry_run && '1' || '0' }}
+          # Logs and summaries of a PUBLIC repo are public. Only enable these in a private repo
+          # (Settings > Variables > PRIVATE_REPO = true).
+          PRINT_DIGEST: ${{ vars.PRIVATE_REPO == 'true' && '1' || '0' }}
+        run: python -m scout.main
+
+      - name: Digest in the run summary (private repos only)
+        if: ${{ always() && vars.PRIVATE_REPO == 'true' }}
+        run: |
+          f=$(ls -1 state/digests/*.md 2>/dev/null | tail -1 || true)
+          if [ -n "$f" ]; then cat "$f" >> "$GITHUB_STEP_SUMMARY"; fi
+
+      - name: Save seen-leads list
+        if: ${{ !inputs.dry_run && success() }}
+        uses: actions/cache/save@v4
+        with:
+          path: state/seen.json
+          key: seen-${{ github.run_id }}

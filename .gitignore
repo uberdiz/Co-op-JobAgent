@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+data/
+config/profile.yaml
+gmail-oauth.json
+client_secret*.json
+.pytest_cache/

@@ -1,0 +1,48 @@
+# Copy this file to config/profile.yaml (git-ignored) and fill it in, OR paste the filled-in YAML into the
+# PROFILE_YAML GitHub secret. Never commit real personal details to a public repo.
+candidate:
+  name: Alex Student
+  email: alex@example.com
+  home: Springfield, MA
+  school: Example Technical High School, Information Technology program, Class of 2027
+  school_short: Example Tech
+  portfolio: https://example.com/
+  github: https://github.com/example
+  graduation: June 2027
+  # Wording used in the Gmail drafts. Keep it true, short and in your own voice.
+  draft_line: I build small Python projects (portfolio below), hold OSHA 10 and CompTIA IT Fundamentals, and plan to work full-time after I graduate in June 2027.
+  availability_line: I can work weekends and holidays.
+  coop_blurb: Example Tech's co-op is paid and its co-op office handles the paperwork.
+  plan_after_graduation: full-time work
+  availability: weekends and holidays; school ends 2:30 PM
+  signature: |
+    Alex Student
+    Springfield, MA | 555-000-0000 | alex@example.com
+    Portfolio: https://example.com/ | GitHub: https://github.com/example
+  # ONLY facts that are true. The agent may not claim anything outside this list.
+  facts:
+    - Information Technology student in a 1,500-hour program (PC repair, networking, programming)
+    - Builds small Python projects
+    - Holds OSHA 10 and CompTIA IT Fundamentals
+
+search:
+  home_base: Springfield, MA
+  timezone: America/New_York
+  max_drive_minutes: 30
+  max_posting_age_days: 90
+  interests_in_priority_order:
+    - AI / software development
+    - IT automation and scripting
+    - Networking, cloud, systems administration
+    - Help desk, desktop support, computer repair
+  # Co-op rules the agent must respect
+  rules:
+    - Must be PAID at minimum wage or higher
+    - Must be in person or hybrid with on-site supervision (not fully remote)
+    - Must NOT require college enrollment, a degree, a security clearance, or age 18+ (unless the posting says high-school students may apply)
+    - Must be related to IT (software/AI, help desk, automation, networking/cloud, repair)
+  max_drafts_per_run: 3
+  queries:
+    - help desk OR desktop support part-time high school student Springfield MA
+    - IT intern OR co-op high school student Massachusetts
+    - junior developer OR apprentice OR intern Springfield MA no degree required

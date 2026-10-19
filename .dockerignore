@@ -1,0 +1,9 @@
+.git
+.venv
+venv
+__pycache__
+data
+tests
+gmail-oauth.json
+client_secret*.json
+.env

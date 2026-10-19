@@ -1,0 +1,90 @@
+watchlist:
+- name: GraVoc Associates
+  website: https://www.gravoc.com
+  location: 10 Centennial Drive, Suite 105, Peabody, MA 01960
+  notes: Business software (ERP, CRM, app development, intranet, integrations), managed IT (MSP), information security, web
+    development
+- name: Prevare, LLC
+  website: https://www.prevare.com
+  location: 100 Cummings Center, Suite 236E, Beverly, MA 01915
+  notes: IT outsourcing, consulting, security, internet & telephone; 24/7 support; own data center
+- name: Network Coverage (NetCov)
+  website: https://netcov.com
+  location: Danvers, MA (3 Electronics Ave, Suite 102 per Elioplus directory - not on official page)
+  notes: Managed IT, cloud, cybersecurity, advisory, compliance, AI; press release also lists software development
+- name: Catalyst Pulse
+  website: https://www.catalystpulse.com
+  location: Salem, MA (no street address published)
+  notes: AI consulting, workflow automation (Zapier/Make), CRM/lead systems, custom AI solutions, AI training, web design
+- name: Beverly Public Schools - Technology Dept.
+  website: https://www.beverlyschools.org
+  location: 'District office: 70 Balch Street, Beverly, MA 01915'
+  notes: 'District IT: network, equipment, laptop program (BHS), Aspen data, tech support for BHS/BMS/elementary'
+- name: JH Turiel & Associates
+  website: http://www.jhturiel.net
+  location: '203 Washington Street, #170, Salem, MA 01970'
+  notes: Network and system management, security, cloud migration, CRM/database setup; Mac-centric and mixed Mac/Windows environments,
+    creative industry
+- name: Salem Public Schools - Technology Dept.
+  website: https://salemk12.org/district-departments/technology/about-the-team/
+  location: Salem, MA (department address not published on team page)
+  notes: 'Instructional technology: technical support team, digital learning, data & applications'
+- name: Braided Technologies
+  website: https://www.braided.tech
+  location: 20 Washington Street, Haverhill, MA 01832 (serves Salem and Newburyport)
+  notes: Managed IT, cloud (AWS/Azure) security consulting, penetration testing, compliance (HIPAA, ISO 27001, NIST), AI-assisted
+    services
+- name: Axcelis Technologies
+  website: https://www.axcelis.com/careers/
+  location: 108 Cherry Hill Drive, Beverly, MA 01915
+  notes: Ion-implant equipment; equipment-control software, controls, manufacturing engineering
+- name: Town of Danvers - Information Technology
+  website: https://www.danversma.gov/Directory.aspx?DID=49
+  location: 2 Burroughs Street, Danvers, MA (per danversma.gov directory search snippet)
+  notes: Town government IT (listed on danversma.gov Directory)
+- name: Danvers Public Schools - Technology
+  website: https://www.danvers.k12.ma.us
+  location: 64 Cabot Road, Danvers, MA (ZoomInfo listing - unverified)
+  notes: District technology support
+- name: City of Salem - Technology & Innovation
+  website: https://www.salemma.gov
+  location: 93 Washington Street, Salem, MA (City Hall)
+  notes: City IT; a 'Director of Technology and Innovation' role exists (May 2024 posting on salemma.gov)
+- name: NOBLE (North of Boston Library Exchange)
+  website: https://www.noblenet.org
+  location: Not verified (tech support line 978-777-8866)
+  notes: Shared library systems and technical support for member libraries incl. Beverly, Peabody Institute (Danvers)
+- name: Tech1Pro
+  website: (website not found)
+  location: 261 Rantoul Street, Beverly, MA 01915 (BBB listing)
+  notes: Computer repair
+- name: Family PC Outlet
+  website: (website not found)
+  location: 75 High Street, Danvers, MA 01923 (BBB listing)
+  notes: Computer repair; service area includes Danvers, Beverly, Lynn, Haverhill
+- name: Peabody Public Schools - Technology
+  website: https://www.peabody.k12.ma.us
+  location: 'Central office: 27 Lowell Street, Peabody, MA 01960'
+  notes: District technology department
+- name: City of Peabody - IT
+  website: https://www.peabody-ma.gov
+  location: 24 Lowell Street, Peabody, MA 01960
+  notes: City government IT (department page not located)
+- name: Peabody Institute Library of Danvers - IT
+  website: https://www.noblenet.org
+  location: Danvers, MA
+  notes: Library technology (IT Coordinator role under Technical Services)
+- name: AI Foundry (Kodak Alaris business unit)
+  website: http://www.aifoundry.com
+  location: Wakefield, MA (no street address)
+  notes: 'Document AI: OCR + ML + generative AI to extract data from financial documents'
+- name: MA AI Hub (MassTech) - AI Summer Career Academy / paid AI internships
+  website: https://aihub.masstech.org
+  location: Westborough, MA / virtual
+  notes: 'State program for grades 9-12: AI Summer Career Academy (2025 pilot); a state-announced paid AI internship initiative
+    with the Work-Based Learning Alliance for '
+- name: Peabody Institute Library (Peabody)
+  website: https://www.peabodylibrary.org
+  location: Peabody, MA (street address not verified)
+  notes: Public library; 2025 posting for 'Senior Technology Librarian & Technical Services Coordinator' who manages all library
+    technology
